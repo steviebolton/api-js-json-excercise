@@ -19,17 +19,21 @@ function getTableHeaders(obj) {
         tableHeaders.push(`<td>${key}</td>`)
     });
 
-    return `<tr>${tableHeaders}</tr>`;
+    return `<br><tr>${tableHeaders}</tr>`;
 }
 
 function generatePaginationButtons(next, prev) {
     if (next && prev) {
-        return `<button onclick="writeToDocument('${prev}')">Previous</button>
-                <button onclick="writeToDocument('${next}')">Next</button>`;
+		return `<br><button type="button" class="btn-dark btn-sm" onclick="writeToDocument('${prev}')">Previous</button>
+                <button type="button" class="btn-dark btn-sm" onclick="writeToDocument('${next}')">Next</button>`;
     } else if (next && !prev) {
-        return `<button onclick="writeToDocument('${next}')">Next</button>`;
+        return `<br><button type="button" class="btn-dark btn-sm" onclick="writeToDocument('${next}')">Next</button>`;
     } else if (!next && prev) {
-        return `<button onclick="writeToDocument('${prev}')">Previous</button>`;
+        return `<button type="button" class="btn-dark btn-sm" onclick="writeToDocument('${prev}')">Previous</button>`;
+    }
+	
+	else if (!next && !prev) {
+        return ` <button type="button" class="btn-dark btn-sm" onclick="writeToDocument('${prev}')">Previous</button>`;
     }
 }
 

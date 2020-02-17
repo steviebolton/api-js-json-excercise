@@ -1,0 +1,15 @@
+
+		
+
+th, td {
+  	border-bottom: 1px solid #ddd;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 0.7em;
+	color:white;
+	tr:nth-child(even) {background-color: #f2f2f2;
+
+	}
+
+
+	
+	
